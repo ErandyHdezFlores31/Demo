@@ -1,0 +1,51 @@
+.margen{
+    margin-top: 50px;
+ }
+ 
+ .boton1{
+    background-color: #ff9900d7;
+    color: white;
+   
+}
+
+.boton1:hover{
+   background: linear-gradient(40deg, rgba(255,153,0,1) 43%, rgba(255,0,172,1) 100%);;
+ color: #fff !important;
+}
+
+.botoncancel{
+    background-color: darkred;
+    color: white;
+}
+
+.margen{
+    margin-top: 50px;
+ }
+
+
+ 
+ .borde{
+     border-radius: 10px;
+ }
+
+.mover{
+   margin-right: 15px;
+}
+
+.colorlabel{
+    border-radius: 15px;
+    width: 150px;
+    margin-left: 45px;
+    background-color: #ff9900d7;
+    color: white;
+}
+
+.container{
+    width: 50%;
+}
+
+.titulo{
+    background-color: #ff9900d7;
+    color: white;
+    border-radius: 10px;
+}

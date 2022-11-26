@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+
+<form (ngSubmit)="guardar(form)" #form="ngForm">
+<div class="container text-center margen border border-success p-2 mb-2 border-opacity-25 borde shadow">
+  <div class="titulo">
+    <h2>Apartados</h2>
+</div>
+<div class="row row-cols-9">
+<div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Clave</label>
+    <div class="col-sm-8">
+      <input type="text"
+      [(ngModel)]="inventario.clave"
+      name="clave"
+      class="form-control" 
+      id="inputPassword">
+    </div>
+  </div>
+  <div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Nombre</label>
+    <div class="col-sm-8">
+      <input type="text"
+      [(ngModel)]="inventario.nombre"
+      name="nombre"
+      class="form-control" 
+      id="inputPassword">
+    </div>
+  </div>
+  <div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Categoria</label>
+    <div class="col-sm-8">
+      <select class="form-select" [(ngModel)]="inventario.categorias_id" name="categorias_id" >
+        <option selected>Seleccionar</option>
+        <option  *ngFor="let categorias of listCat" value="{{ categorias.id }}"> {{ categorias.nomcategoria }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Cantidad</label>
+    <div class="col-sm-8">
+      <input type="text"
+      [(ngModel)]="inventario.cantidad"
+      name="cantidad"
+      class="form-control" 
+      id="inputPassword">
+    </div>
+  </div>
+  <div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Precio Lista</label>
+    <div class="col-sm-8">
+      <input type="number" step="any"
+      [(ngModel)]="inventario.preciolista"
+      name="preciolista"
+      class="form-control" 
+      id="inputPassword">
+    </div>
+  </div>
+  <div class="mb-3 row form-group">
+    <label for="inputPassword" class="col-sm-2 col-form-label colorlabel">Precio Publico</label>
+    <div class="col-sm-8">
+      <input type="number" step="any"
+      [(ngModel)]="inventario.preciopublico"
+      name="preciopublico"
+      class="form-control" 
+      id="inputPassword">
+    </div>
+  </div>
+</div>
+    <br>
+
+    <div class="text-end">
+      <button class="btn btn-block btn-rounded boton1 mover" type="submit">Guardar</button>
+   
+        <button class="btn btn-block btn-rounded botoncancel mover" routerLink="/inventario">Cancelar</button>
+      </div>
+  </div>
+</form>
